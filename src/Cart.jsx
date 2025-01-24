@@ -1,4 +1,4 @@
-export default function Cart({cart}) {
+export default function Cart({ cart, checkout }) {
 	let total = 0;
 	for (let i = 0; i < cart.length; i++) {
 		total += cart[i].price
@@ -17,7 +17,7 @@ export default function Cart({cart}) {
 				))}
 			</ul>
 			<p>Total : ${total}</p>
-			<button>Checkout</button>
+			<button onClick={checkout}>Checkout</button>
 		</div>
 	)
 }
